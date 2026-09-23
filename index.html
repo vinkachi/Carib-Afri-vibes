@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carib/Afro Vibes</title>
+
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <!-- Header -->
+<header>
+
+    <div class="logo">
+        The Vibes Afro-Carib Market
+    </div>
+
+    <nav id="nav-menu">
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Categories</a>
+        <a href="#">About</a>
+        <a href="mailto:thevibesafrocaribmarket@gmail.com?subject=Customer%20Enquiry">
+    Contact
+</a>
+    </nav>
+
+    <div class="header-icons">
+
+    <!-- <span>🔍</span> -->
+
+    <span>♡</span>
+
+    <span class="cart-icon" onclick="openCart()">
+    🛒
+    <span id="cart-count">0</span>
+    </span>
+
+</div>
+
+    <!-- Mobile Menu Button -->
+    <button class="menu-button" onclick="toggleMenu()">
+        ☰
+    </button>
+
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-heading">
+                AUTHENTIC AFRICAN & CARIBBEAN FLAVORS
+            </p>
+
+            <h1>
+                Feel the Rhythm.<br>
+                Taste the Culture.
+            </h1>
+
+            <p>
+                Discover authentic African and Caribbean foods,
+                spices, drinks, and everyday favorites delivered
+                straight to your door.
+            </p>
+
+            <button onclick="document.getElementById('products').scrollIntoView()">
+                Shop Now
+            </button>
+        </div>
+
+    </section>
+
+
+    <!-- Categories Section -->
+    <section class="categories">
+
+        <h2>Shop By Category</h2>
+
+        <p>
+            Discover the flavors you love.
+        </p>
+
+        <div class="category-container">
+
+            <div class="category1">
+                <h3 class="food">African Foods</h3>
+            </div>
+
+            <div class="category2">
+                <h3 class="food">Caribbean Foods</h3>
+            </div>
+
+            <div class="category3">
+                <h3 class="food">Spices</h3>
+            </div>
+
+            <div class="category4">
+                <h3 class="food">Drinks</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Featured Products -->
+    <section class="products" id="products">
+
+        <h2>Featured Products</h2>
+
+        <p>
+            Taste something special today.
+        </p>
+
+        <div class="product-container">
+
+        <div class="product">
+
+            <div class="product-image">
+                <img src="./images/spicy.jpg" alt="African Spice">
+            </div>
+
+            <h3>premium African Spice</h3>
+
+            <p class="price">$8.99</p>
+            <button onclick="addToCart('premium african spice',8.99)">Add to cart</button>
+
+        </div>
+
+        <div class="product">
+
+            <div class="product-image">
+                <img src="./images/fufu.jpg" alt="African Fufu">
+            </div>
+
+            <h3>Premium Fufu Flour</h3>
+
+            <p class="price">$7.99</p>
+
+            <button onclick="addToCart('premium fufu flour', 7.99)">Add to cart</button>
+
+        </div>
+
+        <div class="product">
+
+            <div class="product-image">
+                <img src="./images/yam-1.jpeg" alt="African yam">
+            </div>
+
+            <h3>Fresh African Yam</h3>
+
+            <p class="price">$12.99</p>
+
+            <button onclick="addToCart('fresh african yam', 12.99)">Add to cart</button>
+
+        </div>
+    </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about">
+
+        <h2>Our Culture. Our Flavor.</h2>
+
+        <p>
+            Carib/Afro Vibes brings the rich flavors and traditions
+            of Africa and the Caribbean together in one place.
+            We make it easy for you to discover authentic products
+            and enjoy the taste of home.
+        </p>
+
+    </section>
+
+    <section class="cart-section" id="cart-section">
+
+        <h2>Your Shopping Cart</h2>
+
+        <div id="cart-items"><p>Your Cart is empty</p></div>
+
+        <div class="cart-total">
+            <h3>Total: $ <span id="cart-total">0.00</span></h3>
+        </div>
+
+        <section class="cart-section" id="cart-section">
+
+    <h2>Your Shopping Cart</h2>
+
+    <div id="cart-items">
+        <p>Your cart is empty.</p>
+    </div>
+
+    <div class="cart-total">
+        <h3>
+            Total: $<span id="cart-total">0.00</span>
+        </h3>
+    </div>
+
+    <button class="checkout-button" onclick="checkout()">
+        Checkout
+    </button>
+
+</section>
+
+
+<!-- Checkout Form -->
+
+<section class="checkout-section" id="checkout-section">
+
+    <h2>Checkout</h2>
+
+    <p>Please enter your delivery information.</p>
+
+    <form id="checkout-form" onsubmit="placeOrder(event)">
+
+        <div class="form-group">
+            <label for="customer-name">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="customer-name"
+                required
+            >
+        </div>
+
+
+        <div class="form-group">
+            <label for="customer-email">
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="customer-email"
+                required
+            >
+        </div>
+
+
+        <div class="form-group">
+            <label for="customer-phone">
+                Phone Number
+            </label>
+
+            <input
+                type="tel"
+                id="customer-phone"
+                required
+            >
+        </div>
+
+
+        <div class="form-group">
+            <label for="delivery-address">
+                Delivery Address
+            </label>
+
+            <textarea
+                id="delivery-address"
+                rows="4"
+                required
+            ></textarea>
+        </div>
+
+
+        <button type="submit" class="place-order-button">
+            Place Order
+        </button>
+
+    </form>
+
+</section>
+<section class="confirmation-section" id="confirmation-section">
+
+    <div class="confirmation-box">
+
+        <div class="confirmation-icon">
+            ✓
+        </div>
+
+        <h2>Order Received!</h2>
+
+        <p>
+            Thank you for shopping with Carib/Afro Vibes.
+        </p>
+
+        <p>
+            Your order has been received successfully.
+        </p>
+
+        <div id="order-details"></div>
+
+        <button onclick="continueShopping()">
+            Continue Shopping
+        </button>
+
+    </div>
+
+</section>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h2>Carib/Afro Vibes</h2>
+
+        <p>
+            Feel the Rhythm. Taste the Culture.
+        </p>
+
+        <p>
+            © 2026 Carib/Afro Vibes. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
