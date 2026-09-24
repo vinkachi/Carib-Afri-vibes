@@ -85,7 +85,7 @@ nav a:hover{
         rgba(0, 128, 0, 0.3),
         rgba(0, 0, 80, 0.7)
     ),
-    url(./images/vegetables.webp);
+    url(./vegetables.webp);
     background-size: cover;
     background-position: center;
 }
@@ -182,19 +182,19 @@ nav a:hover{
     border-radius: 10px;
 }
 .category1 {
-    background-image: url(./images/fufu.jpg);
+    background-image: url(./fufu.jpg);
 }
 
 .category2 {
-    background-image: url(./images/yam-1.jpeg);
+    background-image: url(./yam-1.jpeg);
 }
 
 .category3 {
-    background-image: url(./images/spicy.jpg);
+    background-image: url(./spicy.jpg);
 }
 
 .category4 {
-    background-image: url(./images/drinks.jpg);
+    background-image: url(./drinks.jpg);
 }
 .category h3 {
     font-size: 22px;
@@ -213,7 +213,7 @@ nav a:hover{
             rgba(0, 0, 0, 0.6),
             rgba(0, 0, 0, 0.6)
         ),
-        url(./images/african-1.webp);
+        url(./african-1.webp);
 
         color: #ddd;
 
