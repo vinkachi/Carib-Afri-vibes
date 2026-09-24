@@ -82,15 +82,12 @@ nav a:hover{
     linear-gradient(
         90deg,
         /* rgba(0, 128, 0, 0.8), */
-        rgba(0, 128, 0, 0.3),
-        rgba(0, 0, 80, 0.7)
-    ),
+        rgba(0, 0, 80, 0.7),
+        rgba(0, 0, 80, 0.7)),
     url(./vegetables.webp);
     background-size: cover;
     background-position: center;
 }
-
-
 .hero-content {
     max-width: 650px;
 }
