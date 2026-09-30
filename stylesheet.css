@@ -32,8 +32,12 @@ header {
 /* Logo */
 
 .logo {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
+    color: rgb(238, 243, 236);
+    border-top-right-radius: 10rem;
+    padding:10px;
+    background-color: darkslategray;
 }
 
 
@@ -82,12 +86,15 @@ nav a:hover{
     linear-gradient(
         90deg,
         /* rgba(0, 128, 0, 0.8), */
-        rgba(0, 0, 80, 0.7),
-        rgba(0, 0, 80, 0.7)),
-    url(./vegetables.webp);
+        rgba(0, 128, 0, 0.3),
+        rgba(0, 0, 80, 0.7)
+    ),
+    url(./images/vegetables.webp);
     background-size: cover;
     background-position: center;
 }
+
+
 .hero-content {
     max-width: 650px;
 }
@@ -162,13 +169,22 @@ nav a:hover{
     gap: 20px;
 }
 
+.child_1 {
+    border-radius: 2rem;
+    margin: 10px;
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+    background: darkslategrey;
+}
 
+/* Category boxes */
 .category1,
 .category2,
 .category3,
 .category4 {
     height: 220px;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,25 +194,31 @@ nav a:hover{
 
     border-radius: 10px;
 }
+
+/* Category images */
 .category1 {
-    background-image: url(./fufu.jpg);
+    background-image: url(./images/fufu.jpg);
 }
 
 .category2 {
-    background-image: url(./yam-1.jpeg);
+    background-image: url(./images/caribbeanFood.jpeg);
 }
 
 .category3 {
-    background-image: url(./spicy.jpg);
+    background-image: url(./images/spicy.jpg);
 }
 
 .category4 {
-    background-image: url(./drinks.jpg);
-}
-.category h3 {
-    font-size: 22px;
+    background-image: url(./images/drinks.jpg);
 }
 
+/* Category headings */
+.category1 h3,
+.category2 h3,
+.category3 h3,
+.category4 h3 {
+    font-size: 22px;
+}
 
 /* Products */
 
@@ -210,7 +232,7 @@ nav a:hover{
             rgba(0, 0, 0, 0.6),
             rgba(0, 0, 0, 0.6)
         ),
-        url(./african-1.webp);
+        url(./images/african-1.webp);
 
         color: #ddd;
 
@@ -347,21 +369,16 @@ footer p {
 
 @media (max-width: 600px) {
 
-    .menu-button{
+    .menu-button {
         display: block;
     }
 
     nav {
         display: none;
-
         width: 100%;
-
         flex-direction: column;
-
         text-align: center;
-
         gap: 20px;
-
         padding: 20px 0;
     }
 
@@ -369,79 +386,34 @@ footer p {
         display: flex;
     }
 
-    .product-container{
+    .product-container {
         grid-template-columns: 1fr;
     }
 
-    .categories{
+    .categories {
         padding: 60px 20px;
     }
 
-    .category-container{
+    .category-container {
         grid-template-columns: 1fr;
     }
 
-    .products{
+    .products {
         padding: 40px 20px;
     }
 
-    .hero{
+    .hero {
         padding: 40px 20px;
     }
 
-    .hero h1{
+    .hero h1 {
         font-size: 40px;
     }
-
 }
-.menu-button {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-
-    nav {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-        padding: 20px 0;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-
 .food{
     background-color:rgb(228, 234, 234) ;
 }
-@media (max-width: 600px){
 
-    .product-container{
-        grid-template-columns: 1fr;
-    }
-
-    .categories{
-        padding: 60px 20px;
-    }
-
-    .category-container{
-        grid-template-columns: 1fr;
-    }
-
-    .products{
-        padding: 40px 20px;
-    }
-
-    .hero h1{
-        font-size: 40px;
-    }
-}
 /* Shopping Cart */
 
 .cart-section {
@@ -653,4 +625,7 @@ footer p {
 
 .confirmation-box button:hover {
     background-color: darkolivegreen;
+}
+html {
+    scroll-behavior: smooth;
 }
